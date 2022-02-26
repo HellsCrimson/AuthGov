@@ -1,3 +1,4 @@
+using AuthGov.Services;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -9,15 +10,16 @@ namespace AuthGov.Controllers;
 
 public class GetUserController : ControllerBase
 {
-    [HttpGet(Name = "GetUser")]
-    public void Get()
+    private readonly UserService _userService;
+    
+    public GetUserController(UserService userService)
     {
-        /*var filter = Builders<BsonDocument>.Filter.Empty;
-        var result = collection.Find(filter).ToList();
-        
-        foreach (var user in result)
-        {
-            Console.WriteLine(user.ToJson());
-        }*/
+        _userService = userService;
+    }
+    
+    [HttpGet(Name = "GetUser")]
+    public async void Get(string id)
+    {
+        await _userService.GetAsync(id);
     }
 }

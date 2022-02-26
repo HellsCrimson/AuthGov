@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AuthGov.Models;
+using AuthGov.Services;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace AuthGov.Controllers;
@@ -7,14 +9,17 @@ namespace AuthGov.Controllers;
 [Route("[controller]")]
 public class UpdateUserController: ControllerBase
 {
-
+    private readonly UserService _userService;
+    
+    public UpdateUserController(UserService userService)
+    {
+        _userService = userService;
+    }
 
     [HttpPut(Name = "UpdateUser")]
-    public void Put()
+    public async void Put(string id, User updatedUser)
     {
-        /*
-        //how to get the user ? 
-        UpdateUser.UpdateUserDb(collection, "Matthias", "test", "test@test.com", new BsonDocument());*/
+        await _userService.UpdateAsync(id, updatedUser);
     }
     
 }
