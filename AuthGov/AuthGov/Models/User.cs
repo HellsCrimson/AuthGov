@@ -10,17 +10,17 @@ public class User
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
     [BsonElement("_id")]
-    private int ID;
+    public string Id;
     [DataType(DataType.Password)]
     [BsonElement("password")]
-    private string pwd;
+    public string pwd;
     [StringLength(50)]
     [BsonElement("name")]
-    private string name;
+    public string name;
     [DataType(DataType.EmailAddress)]
     [BsonElement("email")]
-    private string address;
-    private File[] _files;
+    public string address;
+    public File[] _files;
 
     public User(string name, string address, string pwd)
     {
@@ -29,14 +29,14 @@ public class User
         this.address = address;
     }
 
-    private int getId()
+    private string getId()
     {
-        return ID;
+        return Id;
     }
 
-    private void setId(int id)
+    private void setId(string id)
     {
-        this.ID = id;
+        this.Id = id;
     }
 
     private void setName(string name)

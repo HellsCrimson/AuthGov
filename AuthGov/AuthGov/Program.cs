@@ -1,4 +1,10 @@
+using AuthGov.Models;
+using AuthGov.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<UserDatabaseSettings>(builder.Configuration.GetSection("UserDatabase"));
+builder.Services.AddSingleton<UserService>();
 
 // Add services to the container.
 
