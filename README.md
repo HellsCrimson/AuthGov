@@ -1,7 +1,10 @@
 # AuthGov
 ReadMe of AuthGov project
 -----------------------------
-![AuthGov](https://github.com/gogo94210/AuthGov/blob/main/authgov.png?raw=true)[Center]
+
+<p align="center">
+  <img src= https://github.com/gogo94210/AuthGov/blob/main/authgov.png?raw=true  alt="AuthGovLogo"/>
+</p>
 
 Your document and your administrative procedure on one click !
 
