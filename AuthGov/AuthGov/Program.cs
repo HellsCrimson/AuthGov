@@ -11,6 +11,9 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+KeyReader kr = new KeyReader();
+kr.Init();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -25,6 +28,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+//app.Run();
 
-KeyReader kr = new KeyReader();
