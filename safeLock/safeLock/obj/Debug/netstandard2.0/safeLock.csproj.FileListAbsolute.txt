@@ -1,0 +1,9 @@
+D:\alixz\oxfordHack\SafeLock\safeLock\bin\Debug\netstandard2.0\safeLock.deps.json
+D:\alixz\oxfordHack\SafeLock\safeLock\bin\Debug\netstandard2.0\safeLock.dll
+D:\alixz\oxfordHack\SafeLock\safeLock\bin\Debug\netstandard2.0\safeLock.pdb
+D:\alixz\oxfordHack\SafeLock\safeLock\obj\Debug\netstandard2.0\safeLock.csprojAssemblyReference.cache
+D:\alixz\oxfordHack\SafeLock\safeLock\obj\Debug\netstandard2.0\safeLock.csproj.CoreCompileInputs.cache
+D:\alixz\oxfordHack\SafeLock\safeLock\obj\Debug\netstandard2.0\safeLock.AssemblyInfoInputs.cache
+D:\alixz\oxfordHack\SafeLock\safeLock\obj\Debug\netstandard2.0\safeLock.AssemblyInfo.cs
+D:\alixz\oxfordHack\SafeLock\safeLock\obj\Debug\netstandard2.0\safeLock.dll
+D:\alixz\oxfordHack\SafeLock\safeLock\obj\Debug\netstandard2.0\safeLock.pdb
