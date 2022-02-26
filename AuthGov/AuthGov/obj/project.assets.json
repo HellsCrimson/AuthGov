@@ -208,19 +208,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\colin\\.nuget\\packages\\": {}
+    "/home/augus/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\GitHub\\AuthGov\\AuthGov\\AuthGov.csproj",
+      "projectUniqueName": "/home/augus/Desktop/AuthGov/AuthGov/AuthGov/AuthGov.csproj",
       "projectName": "AuthGov",
-      "projectPath": "D:\\Documents\\GitHub\\AuthGov\\AuthGov\\AuthGov.csproj",
-      "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\GitHub\\AuthGov\\AuthGov\\obj\\",
+      "projectPath": "/home/augus/Desktop/AuthGov/AuthGov/AuthGov/AuthGov.csproj",
+      "packagesPath": "/home/augus/.nuget/packages/",
+      "outputPath": "/home/augus/Desktop/AuthGov/AuthGov/AuthGov/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\colin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/augus/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -267,7 +267,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
       }
     }
   }

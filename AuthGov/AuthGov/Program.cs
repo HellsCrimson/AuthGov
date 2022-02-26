@@ -1,3 +1,5 @@
+using AuthGov.LocalAuth;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,6 +18,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
@@ -23,3 +26,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+KeyReader kr = new KeyReader();
