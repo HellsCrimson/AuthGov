@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AuthGov.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class UpdateUserController: ControllerBase
 {
     private readonly UserService _userService;

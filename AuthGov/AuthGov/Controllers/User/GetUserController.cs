@@ -6,7 +6,7 @@ using MongoDB.Driver;
 namespace AuthGov.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 
 public class GetUserController : ControllerBase
 {
