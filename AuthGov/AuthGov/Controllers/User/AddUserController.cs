@@ -5,6 +5,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web;
+using AuthGov.Middleware;
+using MongoDB.Bson;
+using MongoDB.Driver;
+
 namespace AuthGov.Controllers;
 
 [ApiController]
@@ -12,10 +16,13 @@ namespace AuthGov.Controllers;
 public class AddUserController : ControllerBase
 {
     [HttpPut(Name = "AddUser")]
-    public string Put()
+    public void Put()
     {
-        User user = new User("test", "test", "test");
+        MongoClient dbClient = new MongoClient("mongodb+srv://AuthGov:D1JSkTv7K3i0hPOO@cluster0.xb2gr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+
+        var db = dbClient.GetDatabase("AuthGov");
+        var collection = db.GetCollection<BsonDocument>("users");
         
-        return "a";
+        AddUser.AddUserDb(collection, "Matthias", "test", "test@test.com");
     }
 }
