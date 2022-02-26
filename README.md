@@ -1,5 +1,5 @@
-# MyGouv
-ReadMe of MyGouv project
+# MyGov
+ReadMe of MyGov project
 -----------------------------
 Your document and your administrative procedure on one click !
 
@@ -7,8 +7,8 @@ Objective:
 Aren't you tired of always updloading the same document and information for all procedure ? 
 What about never doing it again ?
 
-MyGouv provides you a secure way of loggin to any of your government website.
-By assuring your identity with MyGouv, the governement provides all document stocked on their database to any procedure. 
+MyGov provides you a secure way of loggin to any of your government website.
+By assuring your identity with MyGov, the governement provides all document stocked on their database to any procedure. 
 For all other document missing, like proof of address, MyGoov provides you a secure locker to store all your document. 
 It will automatically upload your document for all your procedure.
 
