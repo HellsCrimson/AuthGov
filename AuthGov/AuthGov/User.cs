@@ -27,8 +27,13 @@ public class User
     {
         this.ID = id;
     }
-    
-    
-    
-    
+
+    private void setName(string name)
+    {
+        this.name = name;
+    }
+
+
+
+
 }
