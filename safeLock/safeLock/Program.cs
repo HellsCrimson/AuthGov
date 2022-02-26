@@ -6,12 +6,17 @@ namespace safeLock
     {
         static void Main(string[] args)
         {
+
+            //Console.WriteLine(pow_mod(5,173,374));
             int c1 = 0, c2 = 0;
-            int publicKey = 175;//choosePrime(); need to chance -> get a different public key for every one
-            int p = pow_mod(2,13, publicKey);
+            int publicKey = choosePrime(); //need to chance -> get a different public key for every one
+            Random random = new Random();
+            
+            int secretKey = random.Next(publicKey);
+            int p = pow_mod(3,secretKey, publicKey);
             Console.WriteLine(publicKey);
-            elgamal_en(99,p,publicKey,2,ref c1,ref c2);
-            Console.WriteLine(elgamal_de(c1,c2,13,publicKey,2));
+            elgamal_en(78,p,publicKey,3,ref c1,ref c2);
+            Console.WriteLine(elgamal_de(c1,c2,secretKey,publicKey,3));
         }
         private static int pow_mod(int a, int pui, int mod)
         {
@@ -47,9 +52,9 @@ namespace safeLock
             do
             {
                 Random r = new Random();
-                p = r.Next(200, 1500);
-            } while (!primeNumber(p) && !isprimeMultiple(p - 1));
-
+                p = r.Next(250, 1500);
+            } while (!primeNumber(p) || !isprimeMultiple(p - 1));
+            Console.WriteLine(p);
             return p;
         }
         private static bool primeNumber(long n) //test if n is a prime number, we suppose n > 1
