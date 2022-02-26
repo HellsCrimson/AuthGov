@@ -6,3 +6,5 @@ obj
 .idea
 *.userprefs 
 .DS_Store
+
+Config

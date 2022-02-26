@@ -1,3 +1,4 @@
+using AuthGov.Config;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -12,7 +13,7 @@ public class GetUserController : ControllerBase
     [HttpGet(Name = "GetUser")]
     public void Get()
     {
-        MongoClient dbClient = new MongoClient("mongodb+srv://AuthGov:D1JSkTv7K3i0hPOO@cluster0.xb2gr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+        MongoClient dbClient = new MongoClient(DbUrl.url);
 
         var db = dbClient.GetDatabase("AuthGov");
         var collection = db.GetCollection<BsonDocument>("users");

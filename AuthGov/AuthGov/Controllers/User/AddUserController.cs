@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web;
+using AuthGov.Config;
 using AuthGov.Middleware;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -18,7 +19,7 @@ public class AddUserController : ControllerBase
     [HttpPost(Name = "AddUser")]
     public void Post()
     {
-        MongoClient dbClient = new MongoClient("mongodb+srv://AuthGov:D1JSkTv7K3i0hPOO@cluster0.xb2gr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+        MongoClient dbClient = new MongoClient(DbUrl.url);
 
         var db = dbClient.GetDatabase("AuthGov");
         var collection = db.GetCollection<BsonDocument>("users");

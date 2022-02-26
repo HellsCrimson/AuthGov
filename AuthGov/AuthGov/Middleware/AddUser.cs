@@ -3,7 +3,7 @@ using MongoDB.Driver;
 
 namespace AuthGov.Middleware;
 
-public class AddUser
+public static class AddUser
 {
     public static void AddUserDb(IMongoCollection<BsonDocument> collection, string name, string password, string email)
     {
