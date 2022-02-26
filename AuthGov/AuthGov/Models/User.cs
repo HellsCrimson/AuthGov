@@ -9,12 +9,16 @@ public class User
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
+    [BsonElement("_id")]
     private int ID;
     [DataType(DataType.Password)]
+    [BsonElement("password")]
     private string pwd;
     [StringLength(50)]
+    [BsonElement("name")]
     private string name;
     [DataType(DataType.EmailAddress)]
+    [BsonElement("email")]
     private string address;
     private File[] _files;
 
