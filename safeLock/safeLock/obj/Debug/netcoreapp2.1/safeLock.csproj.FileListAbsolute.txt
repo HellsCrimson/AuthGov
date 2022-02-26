@@ -1,0 +1,11 @@
+D:\alixz\oxfordHack\safeLock\safeLock\bin\Debug\netcoreapp2.1\safeLock.deps.json
+D:\alixz\oxfordHack\safeLock\safeLock\bin\Debug\netcoreapp2.1\safeLock.runtimeconfig.json
+D:\alixz\oxfordHack\safeLock\safeLock\bin\Debug\netcoreapp2.1\safeLock.runtimeconfig.dev.json
+D:\alixz\oxfordHack\safeLock\safeLock\bin\Debug\netcoreapp2.1\safeLock.dll
+D:\alixz\oxfordHack\safeLock\safeLock\bin\Debug\netcoreapp2.1\safeLock.pdb
+D:\alixz\oxfordHack\safeLock\safeLock\obj\Debug\netcoreapp2.1\safeLock.csprojAssemblyReference.cache
+D:\alixz\oxfordHack\safeLock\safeLock\obj\Debug\netcoreapp2.1\safeLock.csproj.CoreCompileInputs.cache
+D:\alixz\oxfordHack\safeLock\safeLock\obj\Debug\netcoreapp2.1\safeLock.AssemblyInfoInputs.cache
+D:\alixz\oxfordHack\safeLock\safeLock\obj\Debug\netcoreapp2.1\safeLock.AssemblyInfo.cs
+D:\alixz\oxfordHack\safeLock\safeLock\obj\Debug\netcoreapp2.1\safeLock.dll
+D:\alixz\oxfordHack\safeLock\safeLock\obj\Debug\netcoreapp2.1\safeLock.pdb
