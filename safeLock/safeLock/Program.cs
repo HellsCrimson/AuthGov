@@ -4,19 +4,43 @@ namespace safeLock
 {
     class Program
     {
+        private static int secretKey;
+        private static int publicKey;
         static void Main(string[] args)
         {
 
-            //Console.WriteLine(pow_mod(5,173,374));
-            int c1 = 0, c2 = 0;
-            int publicKey = choosePrime(); //need to chance -> get a different public key for every one
-            Random random = new Random();
+            generateKeys();
+            secretKey = 1000;
+            int c1 ,c2;
+            (c1,c2) = encripter(230);
+            Console.WriteLine(c1);
+            Console.WriteLine(decripter(c1,c2));
             
-            int secretKey = random.Next(publicKey);
+
+        }
+
+        private static int decripter(int msg1, int msg2)
+        {
+            return elgamal_de(msg1,msg2,secretKey,publicKey,3);
+        }
+
+        private static (int,int) encripter(int msg)
+        {
+            int c1 = 0, c2 = 0;
             int p = pow_mod(3,secretKey, publicKey);
-            Console.WriteLine(publicKey);
-            elgamal_en(78,p,publicKey,3,ref c1,ref c2);
-            Console.WriteLine(elgamal_de(c1,c2,secretKey,publicKey,3));
+            elgamal_en(msg,p,publicKey,3,ref c1,ref c2);
+            return (c1,c2);
+        }
+        private static void generateKeys()
+        {
+            //int c1 = 0, c2 = 0;
+            publicKey = choosePrime(); //need to chance -> get a different public key for every one
+            //Random random = new Random();
+            
+            //secretKey = random.Next(publicKey);
+            //int p = pow_mod(3,secretKey, publicKey);
+            //elgamal_en(78,p,publicKey,3,ref c1,ref c2);
+            //Console.WriteLine(elgamal_de(c1,c2,secretKey,publicKey,3));
         }
         private static int pow_mod(int a, int pui, int mod)
         {
@@ -52,7 +76,7 @@ namespace safeLock
             do
             {
                 Random r = new Random();
-                p = r.Next(250, 1500);
+                p = r.Next(10000,48953);//6500
             } while (!primeNumber(p) || !isprimeMultiple(p - 1));
             Console.WriteLine(p);
             return p;
