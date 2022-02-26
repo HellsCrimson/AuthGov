@@ -10,7 +10,7 @@ public class GetUserController : ControllerBase
     [HttpGet(Name = "GetUser")]
     public string Get()
     {
-        User user = new User("test", "test");
+        User user = new User("test", "test","test");
         return "a";
     }
 }
