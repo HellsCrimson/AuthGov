@@ -11,8 +11,8 @@ namespace AuthGov.Controllers;
 [Route("[controller]")]
 public class AddUserController : ControllerBase
 {
-    [HttpGet(Name = "AddUser")]
-    public string Add()
+    [HttpPut(Name = "AddUser")]
+    public string Put()
     {
         User user = new User("test", "test", "test");
         
