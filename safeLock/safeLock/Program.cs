@@ -10,26 +10,37 @@ namespace safeLock
         {
 
             generateKeys();
-            secretKey = 1000;
-            int c1 ,c2;
-            (c1,c2) = encripter(230);
-            Console.WriteLine(c1);
-            Console.WriteLine(decripter(c1,c2));
+            secretKey = 9999;
+            String msg = "f46ze8r99tgdsdi46iuyj45216ffgy598dsd442689ezetgjyuo56df5f689sawc";
+            (int,int)[] c = encripter(msg);
+            Console.WriteLine(decripter(c));
             
 
         }
 
-        private static int decripter(int msg1, int msg2)
+        private static String decripter((int,int)[] c)
         {
-            return elgamal_de(msg1,msg2,secretKey,publicKey,3);
+            String msg = "";
+            for(int counter = 0; counter < 64; counter++)
+            {
+                int c1,c2;
+                (c1,c2) = c[counter];
+                msg += (char)elgamal_de(c1,c2,secretKey,publicKey,3);
+            }
+            return msg;
         }
 
-        private static (int,int) encripter(int msg)
+        private static (int,int)[] encripter(String msg)
         {
             int c1 = 0, c2 = 0;
             int p = pow_mod(3,secretKey, publicKey);
-            elgamal_en(msg,p,publicKey,3,ref c1,ref c2);
-            return (c1,c2);
+            (int,int)[] msgAfter = new (int,int)[64];
+            for(int counter = 0; counter < 64; counter++)
+            {
+                elgamal_en((int)msg[counter],p,publicKey,3,ref c1,ref c2);
+                msgAfter[counter] = (c1,c2);
+            }
+            return msgAfter;
         }
         private static void generateKeys()
         {
@@ -78,7 +89,6 @@ namespace safeLock
                 Random r = new Random();
                 p = r.Next(10000,48953);//6500
             } while (!primeNumber(p) || !isprimeMultiple(p - 1));
-            Console.WriteLine(p);
             return p;
         }
         private static bool primeNumber(long n) //test if n is a prime number, we suppose n > 1
