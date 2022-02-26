@@ -20,31 +20,13 @@ public class User
     [DataType(DataType.EmailAddress)]
     [BsonElement("email")]
     public string address;
-    public File[] _files;
+    public string key;
 
-    public User(string name, string address, string pwd)
+    public User(string name, string address, string pwd, string key)
     {
         this.name = name;
         this.pwd = pwd;
         this.address = address;
+        this.key = key;
     }
-
-    private string getId()
-    {
-        return Id;
-    }
-
-    private void setId(string id)
-    {
-        this.Id = id;
-    }
-
-    private void setName(string name)
-    {
-        this.name = name;
-    }
-
-
-
-
 }
