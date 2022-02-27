@@ -1,14 +1,9 @@
-from scripts.deploy_myperson import deploy_my_person
 from brownie import accounts, MyPerson
 from datetime import date
 import base64
 import io
 from PIL import Image
 import fitz
-
-global PRIVATE_KEY
-global PUBLIC_KEY
-global CONTRACT_ADDRESS
 
 testaccountprivatekey = (
     "0xc41e8481f4b4351d8cb5591411dd7a9860bd410ad3a926cdd11061bb3dbbbde6"
@@ -42,19 +37,8 @@ def publish_contract(account, private_key):
     f.close()
 
 
-TYPE = True
-PDF = False
-
-
-def add(account, file):
-    if TYPE:
-        addDocument(account, file, """docname""")
-    else:
-        addRecDocument(account, """category""", file)
-
-
 def addDocument(account, file, name):
-    whatfile(file)
+    PDF = whatfile(file)
     if PDF:
         string = pdftoimagetostring(file)
     else:
@@ -63,7 +47,7 @@ def addDocument(account, file, name):
 
 
 def addRecDocument(account, category, file):
-    whatfile(file)
+    PDF = whatfile(file)
     if PDF:
         string = pdftoimagetostring(file)
     else:
@@ -98,13 +82,8 @@ def getDates(account, name):
     # provide this array to web app to display dates of a specific category docs
 
 
-def whatType():
-    # choose on web app if unique doc or multiple ones and set TYPE
-    pass
-
-
-def imagetostring():  # image to string
-    with open("class_diagram_19205373.png", "rb") as image:
+def imagetostring(filename):  # image to string
+    with open(filename, "rb") as image:
         base64_string = base64.b64encode(image.read())
         return base64_string
 
@@ -128,20 +107,11 @@ def pdftoimagetostring(filename):  # pdf to image to string
         filename[l - 1] = "g"
         filename = "".join(filename)
         page.save(filename)
-
         with open(filename, "rb") as image:
             base64_string = base64.b64encode(image.read())
+            return base64_string
 
 
 def whatfile(filename):  # determine if an image or pdf
     l = len(filename)
-    if filename[l - 1] == "f" and filename[l - 2] == "d" and filename[l - 3] == "p":
-        PDF = True
-    else:
-        PDF = False
-
-
-def main():
-    private_key = testaccountprivatekey
-    account = accounts.add(private_key)
-    publish_contract(account, private_key)
+    return filename[l - 1] == "f" and filename[l - 2] == "d" and filename[l - 3] == "p"
