@@ -3,7 +3,7 @@ ReadMe of AuthGov by EpiSafe
 -----------------------------
 Welcome to an EpiSafe project
 <p align="center">
-  <img src= ![ourlogo](https://user-images.githubusercontent.com/78035043/155868294-e2bd0e8a-027c-459c-b41a-dcb59593b3ef.png) alt="AuthGovLogo"/>
+  <img src= https://user-images.githubusercontent.com/78035043/155868294-e2bd0e8a-027c-459c-b41a-dcb59593b3ef.png />
 </p>
 
 
