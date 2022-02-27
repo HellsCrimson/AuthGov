@@ -4,26 +4,24 @@ namespace AuthGov.LocalAuth;
 class Elgamal
 {
     private static int secretKey;
-    private static int publicKey;
-    public static (int,int)[] Execute(string args)
+    private static int _publicKey;
+    public static (int,int)[] Execute(string args, int publicKey, int password)
     {
-
-        GenerateKeys();
-        secretKey = 9999;
+        _publicKey = publicKey; 
+        secretKey = password;
         (int,int)[] c = Encripter(args);
-        Console.WriteLine(Decripter(c));
         return c;
 
     }
 
-    public static String Decripter((int,int)[] c)
+    public static String Decripter((int,int)[] c, int publicKey, int password)
     {
         String msg = "";
         for(int counter = 0; counter < 64; counter++)
         {
             int c1,c2;
             (c1,c2) = c[counter];
-            msg += (char)ElgamalDe(c1,c2,secretKey,publicKey,3);
+            msg += (char)ElgamalDe(c1,c2,password,publicKey,3);
         }
         return msg;
     }
@@ -31,25 +29,25 @@ class Elgamal
     public static (int,int)[] Encripter(String msg)
     {
         int c1 = 0, c2 = 0;
-        int p = PowMod(3,secretKey, publicKey);
+        int p = PowMod(3,secretKey, _publicKey);
         (int,int)[] msgAfter = new (int,int)[64];
         for(int counter = 0; counter < 64; counter++)
         {
-            ElgamalEn((int)msg[counter],p,publicKey,3,ref c1,ref c2);
+            ElgamalEn((int)msg[counter],p,_publicKey,3,ref c1,ref c2);
             msgAfter[counter] = (c1,c2);
         }
         return msgAfter;
     }
-    private static void GenerateKeys()
+    public static int GenerateKeys()
     {
         //int c1 = 0, c2 = 0;
-        publicKey = ChoosePrime(); //need to chance -> get a different public key for every one
+        return ChoosePrime(); //need to chance -> get a different public key for every one
         //Random random = new Random();
         
-        //secretKey = random.Next(publicKey);
-        //int p = PowMod(3,secretKey, publicKey);
-        //ElgamalEn(78,p,publicKey,3,ref c1,ref c2);
-        //Console.WriteLine(ElgamalDe(c1,c2,secretKey,publicKey,3));
+        //secretKey = random.Next(_publicKey);
+        //int p = PowMod(3,secretKey, _publicKey);
+        //ElgamalEn(78,p,_publicKey,3,ref c1,ref c2);
+        //Console.WriteLine(ElgamalDe(c1,c2,secretKey,_publicKey,3));
     }
     private static int PowMod(int a, int pui, int mod)
     {

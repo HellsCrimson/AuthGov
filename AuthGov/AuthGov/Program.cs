@@ -12,10 +12,13 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 KeyReader kr = new KeyReader();
-if (kr.Init())
+if (kr.Init(1234))
 {
     Console.WriteLine("KeyReader init was a succes !");
 }
+
+Console.WriteLine(kr.ReadKey("public"));
+Console.WriteLine(kr.ReadKey("private", 1234));
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
