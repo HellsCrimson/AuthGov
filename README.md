@@ -23,9 +23,10 @@ Whenever you need to send an administrative document to complete a form .
 
 # Technology :
 In order to do so, we implemented:
-  -Storage of your files in a decentralized way: the BlockChain
-  -Offer connection to all of you government instance via our WebApp
-  -A unique way of loggin to our service to prove your identity, by using a hardware key and robust encryption algorithms
+
+  - Storage of your files in a decentralized way: the BlockChain
+  - Offer connection to all of you government instance via our WebApp
+  - A unique way of loggin to our service to prove your identity, by using a hardware key and robust encryption algorithms
   - A place to keep all your important files in the same place so you can have them at all time 
  
 # Storage :
@@ -34,7 +35,7 @@ This decentralised storage allows you be the only one to interact with your pers
 Smart Contracts allow a great security, but you have to be responsible with your private key and password...
 Also, even if Ethereum Blockchain is a little bit polluting, it is still better than cutting tons of trees for these paper documents ! And Ethereum2.0 is coming and will be way more clean !
 
-# WebApp
+# WebApp :
 The WebApp is the interface between the user and the decentralised stockage of you documents. It allows you to add, update and delete your documents at will with only you in charge. It uses an api in C# to do the login process and then send the request to the Blockchain.
 
 # Encryption :
