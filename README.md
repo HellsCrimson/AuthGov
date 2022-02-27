@@ -23,9 +23,10 @@ Whenever you need to send an administrative document to complete a form .
 
 # Technology :
 In order to do so, we implemented:
-  -Storage of your files in a decentralized way: the BlockChain
-  -Offer connection to all of you government instance via our WebApp
-  -A unique way of loggin to our service to prove your identity, by using a hardware key and robust encryption algorithms
+
+  - Storage of your files in a decentralized way: the BlockChain
+  - Offer connection to all of you government instance via our WebApp
+  - A unique way of loggin to our service to prove your identity, by using a hardware key and robust encryption algorithms
   - A place to keep all your important files in the same place so you can have them at all time 
  
 # Storage :
