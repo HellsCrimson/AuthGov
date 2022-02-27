@@ -2,7 +2,7 @@
 ReadMe of AuthGov project
 -----------------------------
 <p align="center">
-  <img src= https://github.com/gogo94210/AuthGov/blob/main/authgov.png?raw=true  alt="AuthGovLogo"/>
+  <img src= https://github.com/gogo94210/AuthGov/blob/main/banner.png?raw=true  alt="AuthGovLogo"/>
 </p>
 <p align="center">
   <img src= https://github.com/gogo94210/AuthGov/blob/main/authgov.png?raw=true  alt="AuthGovLogo"/>
