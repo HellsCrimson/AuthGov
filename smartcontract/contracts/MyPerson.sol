@@ -24,6 +24,8 @@ contract MyPerson is Ownable {
             keccak256(abi.encodePacked((b))));
     }
 
+    //SETTERS
+
     function setDocument(
         //add a new unique doc
         string memory compileddoc,
@@ -75,6 +77,8 @@ contract MyPerson is Ownable {
         }
     }
 
+    //GETTERS
+
     function getDocument(
         //get a specific file from it name
         string memory namedoc
@@ -111,7 +115,7 @@ contract MyPerson is Ownable {
         }
     }
 
-    function getRecDocuments(string memory namedoc, string memory date)
+    function getRecDocument(string memory namedoc, string memory date)
         public
         view
         onlyOwner
