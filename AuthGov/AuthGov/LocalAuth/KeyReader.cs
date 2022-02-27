@@ -48,10 +48,6 @@ public class KeyReader
         
         _filePaths = Directory.GetFiles(_secureDrive.RootDirectory.ToString());
         Array.Sort(_filePaths);
-        foreach (string path in _filePaths)
-        {
-            Console.WriteLine(path);
-        }
         EncryptPrivateKey(password);
         return checkKeysValidity();
     }
@@ -162,7 +158,6 @@ public class KeyReader
     {
         string test = File.ReadAllText(_filePaths[(int) keyFileType.ELGAMAL_PRIVATE]);
         string test2 = pass.ToString();
-        Console.WriteLine(test + " " + test2);
         return true;
     }
 }
