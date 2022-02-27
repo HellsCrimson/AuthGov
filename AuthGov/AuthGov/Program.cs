@@ -12,7 +12,10 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 KeyReader kr = new KeyReader();
-kr.Init();
+if (kr.Init())
+{
+    Console.WriteLine("KeyReader init was a succes !");
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

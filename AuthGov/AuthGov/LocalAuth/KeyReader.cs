@@ -16,8 +16,6 @@ public class KeyReader
         
         foreach (var drive in drives)
         {
-            Console.WriteLine(drive.Name);
-            Console.WriteLine(drive.VolumeLabel);
             if (drive.VolumeLabel.Contains("TESTDRIVE"))
             {
                 _secureDrive = drive;
@@ -31,11 +29,21 @@ public class KeyReader
         }
         Console.WriteLine("The correct key is plugged in !");
         _filePaths = Directory.GetFiles(_secureDrive.RootDirectory.ToString());
+        Array.Sort(_filePaths);
+        foreach (string path in _filePaths)
+        {
+            Console.WriteLine(path);
+        }
         if (_filePaths.Length == 0)
         {
             CreateKeys();
+            return true;
         }
-        return true;
+        else
+        {
+            EncryptPrivateKey();
+            return checkKeysValidity();
+        }
     }
 
     private void CreateKeys()
@@ -69,9 +77,32 @@ public class KeyReader
         }
     }
 
+    public bool checkKeysValidity()
+    {
+        string root = _secureDrive.RootDirectory.ToString();
+        bool doFilesExist = _filePaths.Contains(root + "/publicKey.agk") && 
+                            _filePaths.Contains(root + "/privateKey.agk") && 
+                            _filePaths.Contains(root + "/contractAddress.agk");
+        
+        bool areFilesValid = File.ReadAllText(root + "/publicKey.agk").Length == 40 &&
+                             File.ReadAllText(root + "/privateKey.agk").Length == 64 &&
+                             File.ReadAllText(root + "/contractAddress.agk").Length == 40;
+        
+        return doFilesExist && areFilesValid;
+    }
+
+    private void EncryptPrivateKey()
+    {
+        (int, int)[] c = Elgamal.Execute(File.ReadAllText(_filePaths[1]));
+        foreach ((int, int) valueTuple in c)
+        {
+           Console.WriteLine(valueTuple);
+        }
+    }
     private string GetDecryptedKey()
     {
         //TODO
+        
         return "";
     }
     private bool CheckLogin()

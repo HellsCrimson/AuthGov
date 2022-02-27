@@ -5,19 +5,18 @@ class Elgamal
 {
     private static int secretKey;
     private static int publicKey;
-    static void Execute(string[] args)
+    public static (int,int)[] Execute(string args)
     {
 
         GenerateKeys();
         secretKey = 9999;
-        String msg = "f46ze8r99tgdsdi46iuyj45216ffgy598dsd442689ezetgjyuo56df5f689sawc";
-        (int,int)[] c = Encripter(msg);
+        (int,int)[] c = Encripter(args);
         Console.WriteLine(Decripter(c));
-        
+        return c;
 
     }
 
-    private static String Decripter((int,int)[] c)
+    public static String Decripter((int,int)[] c)
     {
         String msg = "";
         for(int counter = 0; counter < 64; counter++)
@@ -29,7 +28,7 @@ class Elgamal
         return msg;
     }
 
-    private static (int,int)[] Encripter(String msg)
+    public static (int,int)[] Encripter(String msg)
     {
         int c1 = 0, c2 = 0;
         int p = PowMod(3,secretKey, publicKey);
