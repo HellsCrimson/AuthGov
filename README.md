@@ -11,10 +11,10 @@ Welcome to an EpiSafe project !
   <img src= https://github.com/gogo94210/AuthGov/blob/main/authgov.png?raw=true  alt="AuthGovLogo"/>
 </p>
 
-Your document and your administrative procedure on one click !
+Your documenst and your administrative procedures on one click !
 
 # Objective :
-  -Aren't you tired of always updloading the same document and information for all procedure ? What about never doing it again ?
+- Aren't you tired of always updloading the same document and information for all procedure ? What about never doing it again ?
 
 AuthGov provides you a secure way of loggin to any of your government website.
 By assuring your identity with AuthGov, the governement provides all document stocked on their database to any procedure. 
