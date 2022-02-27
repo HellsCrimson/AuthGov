@@ -34,7 +34,10 @@ In order to do so, we implemented:
 # WebApp
 
 # Encryption
-
+Worry for the time when you lose your flash disk ? 
+Don’t worry, we had consider this case for you, we have encrypted the private key !
+We use Elgamal encryption  which is similar to RSA but safer than it. For the keys, the user will choose himself a four number private key, and we will generate automatically the public key for he / she and we will stored it the flash disk. 
+We are the safest!!!!
 # Loggin
 You don't find it confortable to centralize all your document/proof of identity in an unsecure app?
 Yes, me neither.
