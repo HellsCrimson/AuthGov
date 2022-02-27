@@ -16,7 +16,7 @@ Your documents and your administrative procedures, everywhere, on one click !
 # Objective :
 - Are you not tired of always updloading the same document and information for all your online administrative procedures ? What about never doing it again ?
 
-AuthGov provides you a secure way of loggin to any of your government website.
+AuthGov provides you a secured way of login to any of your government website.
 By assuring your identity with AuthGov, the governement provides all document stocked on their database to any procedure. 
 For all other document missing, like proof of address, AuthGov provides you with a secure locker to store all your documents. 
 Whenever you need to send an administrative document to complete a form .
@@ -26,7 +26,7 @@ In order to do so, we implemented:
 
   - Storage of your files in a decentralized way: the BlockChain
   - Offer connection to all of you government instance via our WebApp
-  - A unique way of loggin to our service to prove your identity, by using a hardware key and robust encryption algorithms
+  - A unique way of login to our service to prove your identity, by using a hardware key and robust encryption algorithms
   - A place to keep all your important files in the same place so you can have them at all time 
  
 # Storage :
@@ -46,7 +46,7 @@ We are the safest!!!!
 # Login :
 You feel uncomfortable when centralizing all your document/proof of identity in an unsecure app?
 So do we.
-That's why AuthGov provide you a safest way to loggin on the app: an hardware USB key. This key will allow you to connect on AuthGoov but also contains the key to undecrypted all your data. 
+That's why AuthGov provide you a safest way to login on the app: an hardware USB key. This key will allow you to connect on AuthGoov but also contains the key to undecrypted all your data. 
 
 
 Need to prove your identity on a governement website ? 
