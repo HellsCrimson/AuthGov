@@ -25,6 +25,7 @@ def deploy_my_person(private_key):
 def publish_contract():
     contract = deploy_my_person()
     CONTRACT_ADDRESS = contract.address
+    f = open("../../")
 
 
 def main():
