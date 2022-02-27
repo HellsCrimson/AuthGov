@@ -1,25 +1,40 @@
 # AuthGov
-ReadMe of AuthGov project
+ReadMe of AuthGov by EpiSafe
 -----------------------------
 Welcome to an EpiSafe project
 <p align="center">
   <img src= https://github.com/gogo94210/AuthGov/blob/main/banner.png?raw=true  alt="AuthGovLogo"/>
 </p>
+# AuthGov:
+
 <p align="center">
   <img src= https://github.com/gogo94210/AuthGov/blob/main/authgov.png?raw=true  alt="AuthGovLogo"/>
 </p>
 
 Your document and your administrative procedure on one click !
 
-Objective:
-Aren't you tired of always updloading the same document and information for all procedure ? 
-What about never doing it again ?
+# Objective:
+  -Aren't you tired of always updloading the same document and information for all procedure ? What about never doing it again ?
 
 AuthGov provides you a secure way of loggin to any of your government website.
 By assuring your identity with AuthGov, the governement provides all document stocked on their database to any procedure. 
 For all other document missing, like proof of address, AuthGoov provides you a secure locker to store all your document. 
 It will automatically upload your document for all your procedure.
 
+# Technology:
+In order to do so, we implemented:
+  -Storage of your files in a decentralized way: the BlockChain
+  -Offer connection to all of you government instance via our WebApp
+  -An effective and secure way to encrypt your data
+  -A unique way of loggin to our service to prove your identity
+ 
+# Storage
+
+# WebApp
+
+# Encryption
+
+# Loggin
 You don't find it confortable to centralize all your document/proof of identity in an unsecure app?
 Yes, me neither.
 That's why AuthGoov provide you a safest way to loggin on the app: an hardware USB key. This key will allow you to connect on AuthGoov but also contains the key to undecrypted all your data. 
