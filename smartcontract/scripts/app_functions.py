@@ -1,3 +1,4 @@
+from turtle import st
 from brownie import accounts, MyPerson
 from datetime import date
 import base64
@@ -69,23 +70,22 @@ def getRecDocument(account, name, date):
 
 def getDocumentsNames(account):
     namesarray = MyPerson[-1].listDocuments({"from": account})
-    # provide this array to web app to display documents names
+    return namesarray
 
 
 def getCategories(account):
     categoriesarray = MyPerson[-1].listRecDocumentsCat({"from": account})
-    # provide this array to web app to display categories docs
+    return categoriesarray
 
 
 def getDates(account, name):
     datesarray = MyPerson[-1].listRecDocumentsDates(name, {"from": account})
-    # provide this array to web app to display dates of a specific category docs
+    return datesarray
 
 
-def imagetostring(filename):  # image to string
+def imagetostring(filename):  # image to strings
     with open(filename, "rb") as image:
         base64_string = base64.b64encode(image.read())
-        return base64_string
 
 
 def decode(str):  # string to image
