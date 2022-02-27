@@ -141,6 +141,7 @@ public class KeyReader
                 {
                     toPutCouple.Item1 = toPut;
                     switcher++;
+                    toPut = 0;
                 }
                 else
                 {
@@ -150,6 +151,7 @@ public class KeyReader
                     toPutCouple = (0, 0);
                     switcher = 0;
                     indice++;
+                    toPut = 0;
                 }
             }
         }
