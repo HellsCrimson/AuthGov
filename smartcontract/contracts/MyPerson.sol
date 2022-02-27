@@ -88,7 +88,6 @@ contract MyPerson is Ownable {
                 return uniquedocuments[uint256(i)];
             }
         }
-        return "error";
     }
 
     function listDocuments() public view onlyOwner returns (string[] memory) {
