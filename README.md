@@ -35,6 +35,7 @@ Smart Contracts allow a great security, but you have to be responsible with your
 Also, even if Ethereum Blockchain is a little bit polluting, it is still better than cutting tons of trees for these paper documents ! And Ethereum2.0 is coming and will be way more clean !
 
 # WebApp
+The WebApp is the interface between the user and the decentralised stockage of you documents. It allows you to add, update and delete your documents at will with only you in charge. It uses an api in C# to do the login process and then send the request to the Blockchain.
 
 # Encryption :
 Worry about the time when you lose your flash disk ? Don’t worry, we have considered this case for you, we have encrypted the private key !
