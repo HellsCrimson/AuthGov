@@ -19,14 +19,14 @@ public class AddUserController : ControllerBase
     }
     
     [HttpPost(Name = "AddUser")]
-    public async void Post(string name, string address, int pwd)
+    public async void Post(string name, string address, int pwd, string email)
     {
         KeyReader keyReader = new KeyReader();
         if (keyReader.Init(pwd))
             return;
         string pwdHashed = GetHashString(pwd.ToString());
         string key = keyReader.ReadKey("public");
-        await _userService.CreateAsync(new User(name, address, pwdHashed, key));
+        await _userService.CreateAsync(new User(name, address, pwdHashed, key, email));
     }
     
     public static byte[] GetHash(string inputString)

@@ -17,16 +17,30 @@ public class User
     [StringLength(50)]
     [BsonElement("name")]
     public string name;
+    [DataType(DataType.Text)]
+    [BsonElement("address")]
+    public string address;
     [DataType(DataType.EmailAddress)]
     [BsonElement("email")]
-    public string address;
+    public string email;
     public string key;
 
-    public User(string name, string address, string pwd, string key)
+    public User(string name, string address, string pwd, string key, string email)
     {
         this.name = name;
         this.pwd = pwd;
         this.address = address;
         this.key = key;
+        this.email = email;
+    }
+    
+    public User(string id, string name, string address, string pwd, string key, string email)
+    {
+        this.Id = id;
+        this.name = name;
+        this.pwd = pwd;
+        this.address = address;
+        this.key = key;
+        this.email = email;
     }
 }

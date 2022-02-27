@@ -17,9 +17,12 @@ public class UpdateUserController: ControllerBase
     }
 
     [HttpPut(Name = "UpdateUser")]
-    public async void Put(string id, User updatedUser)
+    public async void Put(string id, string address, string email)
     {
-        await _userService.UpdateAsync(id, updatedUser);
+        var oldUser = _userService.GetAsync(id).Result;
+        if (oldUser == null)
+            return;
+        await _userService.UpdateAsync(id, new User(oldUser.Id, oldUser.name, address, oldUser.pwd, oldUser.key, email));
     }
     
 }
