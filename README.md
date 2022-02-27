@@ -5,7 +5,8 @@ Welcome to an EpiSafe project
 <p align="center">
   <img src= https://github.com/gogo94210/AuthGov/blob/main/banner.png?raw=true  alt="AuthGovLogo"/>
 </p>
-# AuthGov:
+Let me introduce you:
+
 
 <p align="center">
   <img src= https://github.com/gogo94210/AuthGov/blob/main/authgov.png?raw=true  alt="AuthGovLogo"/>
@@ -47,4 +48,6 @@ Do it with AuthGoovAp ! After loggin it with the chip located on your hardware k
 Project for the OxfordHack2022
 
 Coders:
+gogo94210
+Grey999
 
