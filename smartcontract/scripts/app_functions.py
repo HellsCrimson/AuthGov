@@ -23,9 +23,50 @@ def deploy_my_person(private_key):
 
 
 def publish_contract():
-    contract = deploy_my_person()
+    contract = deploy_my_person(
+        "c41e8481f4b4351d8cb5591411dd7a9860bd410ad3a926cdd11061bb3dbbbde6"
+    )
     CONTRACT_ADDRESS = contract.address
-    f = open("../../")
+
+    f = open("../../AuthGov/publicKey.txt")
+    f.write(PUBLIC_KEY)
+    f.close()
+
+    f = open("../../AuthGov/privateKey.txt")
+    f.write(PRIVATE_KEY)
+    f.close()
+
+    f = open("../../AuthGov/contractAddress.txt")
+    f.write(CONTRACT_ADDRESS)
+    f.close()
+
+
+def addDocument(account, file):
+    MyPerson[-1].setDocument()
+
+
+def addRecDocument(account):
+    pass
+
+
+def getDocument():
+    pass
+
+
+def getRecDocument():
+    pass
+
+
+def getDocumentsNames():
+    pass
+
+
+def getCategories():
+    pass
+
+
+def getDates():
+    pass
 
 
 def main():
